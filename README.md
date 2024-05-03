@@ -5,6 +5,7 @@
 
 
 ```bash
+# nginx 디렉터리
 curl -L https://raw.githubusercontent.com/tlarbals824/nginx-boilerplate/main/init-letsencrypt.sh > init-letsencrypt.sh
 ```
 
@@ -21,6 +22,8 @@ email="" # 이메일 입력
 
 
 ## 3. nginx 설정 파일 추가 - 인증서 발급 받기 전
+
+* nginx/data/nginx 디렉터리, nginx.conf 파일 생성
 
 ```bash
 events{
@@ -49,6 +52,8 @@ http{
 ## 4. 인증서 발급 받기
 
 ```bash
+docker compose up -d # nginx 실행 잘되는지 확인
+
 sudo chmod +x init-letsencrypt.sh
 sudo ./init-letsencrypt.sh
 ```
