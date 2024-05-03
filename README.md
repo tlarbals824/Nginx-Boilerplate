@@ -1,5 +1,8 @@
 # Nginx Boilerplate
 
+## 참고
+
+https://github.com/wmnnd/nginx-certbot
 
 ## 1. init-letsencrypt.sh 가져오기
 
