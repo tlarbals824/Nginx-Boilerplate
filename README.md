@@ -36,7 +36,7 @@ events{
 http{
     server {
         listen 80;
-        server_name example.org;
+        server_name example.org; # 도메인 입력
         server_tokens off;
 
         location /.well-known/acme-challenge/ {
@@ -71,7 +71,7 @@ events{
 http{
     server {
         listen 80;
-        server_name example.org;
+        server_name example.org; # 도메인 입력
         server_tokens off;
 
         location /.well-known/acme-challenge/ {
@@ -85,16 +85,16 @@ http{
 
     server {
         listen 443 ssl;
-        server_name example.org;
+        server_name example.org; # 도메인 입력
         server_tokens off;
 
-        ssl_certificate /etc/letsencrypt/live/example.org/fullchain.pem;
-        ssl_certificate_key /etc/letsencrypt/live/example.org/privkey.pem;
+        ssl_certificate /etc/letsencrypt/live/example.org/fullchain.pem; # 도메인 입력
+        ssl_certificate_key /etc/letsencrypt/live/example.org/privkey.pem; # 도메인 입력
         include /etc/letsencrypt/options-ssl-nginx.conf;
         ssl_dhparam /etc/letsencrypt/ssl-dhparams.pem;
 
         location / {
-            proxy_pass  http://example.org;
+            proxy_pass  http://example.org; # 도메인 또는 도커 이미지 이름 입력
         }
     }
 }
