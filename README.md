@@ -5,7 +5,7 @@
 
 
 ```bash
-curl -L https://raw.githubusercontent.com/tlarbals824/nginx-boilerplate/master/init-letsencrypt.sh > init-letsencrypt.sh
+curl -L https://raw.githubusercontent.com/tlarbals824/nginx-boilerplate/main/init-letsencrypt.sh > init-letsencrypt.sh
 ```
 
 ## 2. init-letsencrypt.sh 설정하기
